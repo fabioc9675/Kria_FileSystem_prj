@@ -1,0 +1,6 @@
+# .gitignore for Vitis project (Fabian Test)
+IDE.log
+.analytics
+/RemoteSystemsTempFiles
+.metadata
+/kria_arch_a_platform
