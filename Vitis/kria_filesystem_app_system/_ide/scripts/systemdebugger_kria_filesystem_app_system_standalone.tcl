@@ -14,7 +14,7 @@ source D:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
 targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
-targets -set -filter {jtag_cable_name =~ "Xilinx SCK-KR XFL1IPFUEYB5A" && level==0 && jtag_device_ctx=="jsn-SCK-KR-XFL1IPFUEYB5A-5ba00477-0"}
+targets -set -filter {jtag_cable_name =~ "Xilinx SCK-KR XFL1IPFUEYB5A" && level==0 && jtag_device_ctx=="jsn-SCK-KR-XFL1IPFUEYB5A-04724093-0"}
 fpga -file C:/GitHub/Kria_FileSystem_prj/Vitis/kria_filesystem_app/_ide/bitstream/kria_bd_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
 loadhw -hw C:/GitHub/Kria_FileSystem_prj/Vitis/kria_arch_a_platform/export/kria_arch_a_platform/hw/kria_bd_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs

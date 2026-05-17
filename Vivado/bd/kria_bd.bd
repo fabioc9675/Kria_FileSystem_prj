@@ -3335,41 +3335,46 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "emio_sdio_1_clk_out": {
+          "emio_sdio1_clk_out": {
             "direction": "I"
           },
-          "emio_sdio_1_clk_in_fb": {
+          "emio_sdio1_fb_clk_in": {
             "direction": "O"
           },
-          "emio_sdio_1_cmd_o": {
+          "emio_sdio1_cmdout": {
             "direction": "I"
           },
-          "emio_sdio_1_cmd_i": {
+          "emio_sdio1_cmdin": {
             "direction": "O"
           },
-          "emio_sdio_1_cmd_ena": {
+          "emio_sdio1_cmdena": {
             "direction": "I"
           },
-          "emio_sdio_1_data_o": {
+          "emio_sdio1_dataout": {
             "direction": "I",
             "left": "3",
             "right": "0"
           },
-          "emio_sdio_1_data_i": {
+          "emio_sdio1_datain": {
             "direction": "O",
             "left": "3",
             "right": "0"
           },
-          "emio_sdio_1_data_ena": {
+          "emio_sdio1_dataena": {
             "direction": "I",
             "left": "3",
             "right": "0"
           },
-          "emio_sdio_1_cd_i": {
+          "emio_sdio1_cd_n": {
             "direction": "O"
           },
-          "emio_sdio_1_wp": {
-            "direction": "O"
+          "emio_sdio1_ledcontrol": {
+            "direction": "I"
+          },
+          "emio_sdio1_bus_volt": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
           },
           "sd_clk_out": {
             "direction": "O"
@@ -3627,25 +3632,25 @@
       },
       "sd_io_wrapper_0_emio_sdio_1_cd_i": {
         "ports": [
-          "sd_io_wrapper_0/emio_sdio_1_cd_i",
+          "sd_io_wrapper_0/emio_sdio1_cd_n",
           "zynq_ultra_ps_e_0/emio_sdio1_cd_n"
         ]
       },
       "sd_io_wrapper_0_emio_sdio_1_clk_in_fb": {
         "ports": [
-          "sd_io_wrapper_0/emio_sdio_1_clk_in_fb",
+          "sd_io_wrapper_0/emio_sdio1_fb_clk_in",
           "zynq_ultra_ps_e_0/emio_sdio1_fb_clk_in"
         ]
       },
       "sd_io_wrapper_0_emio_sdio_1_cmd_i": {
         "ports": [
-          "sd_io_wrapper_0/emio_sdio_1_cmd_i",
+          "sd_io_wrapper_0/emio_sdio1_cmdin",
           "zynq_ultra_ps_e_0/emio_sdio1_cmdin"
         ]
       },
       "sd_io_wrapper_0_emio_sdio_1_data_i": {
         "ports": [
-          "sd_io_wrapper_0/emio_sdio_1_data_i",
+          "sd_io_wrapper_0/emio_sdio1_datain",
           "zynq_ultra_ps_e_0/emio_sdio1_datain"
         ]
       },
@@ -3676,34 +3681,46 @@
           "fan_en_b"
         ]
       },
+      "zynq_ultra_ps_e_0_emio_sdio1_bus_volt": {
+        "ports": [
+          "zynq_ultra_ps_e_0/emio_sdio1_bus_volt",
+          "sd_io_wrapper_0/emio_sdio1_bus_volt"
+        ]
+      },
       "zynq_ultra_ps_e_0_emio_sdio1_clkout": {
         "ports": [
           "zynq_ultra_ps_e_0/emio_sdio1_clkout",
-          "sd_io_wrapper_0/emio_sdio_1_clk_out"
+          "sd_io_wrapper_0/emio_sdio1_clk_out"
         ]
       },
       "zynq_ultra_ps_e_0_emio_sdio1_cmdena": {
         "ports": [
           "zynq_ultra_ps_e_0/emio_sdio1_cmdena",
-          "sd_io_wrapper_0/emio_sdio_1_cmd_ena"
+          "sd_io_wrapper_0/emio_sdio1_cmdena"
         ]
       },
       "zynq_ultra_ps_e_0_emio_sdio1_cmdout": {
         "ports": [
           "zynq_ultra_ps_e_0/emio_sdio1_cmdout",
-          "sd_io_wrapper_0/emio_sdio_1_cmd_o"
+          "sd_io_wrapper_0/emio_sdio1_cmdout"
         ]
       },
       "zynq_ultra_ps_e_0_emio_sdio1_dataena": {
         "ports": [
           "zynq_ultra_ps_e_0/emio_sdio1_dataena",
-          "sd_io_wrapper_0/emio_sdio_1_data_ena"
+          "sd_io_wrapper_0/emio_sdio1_dataena"
         ]
       },
       "zynq_ultra_ps_e_0_emio_sdio1_dataout": {
         "ports": [
           "zynq_ultra_ps_e_0/emio_sdio1_dataout",
-          "sd_io_wrapper_0/emio_sdio_1_data_o"
+          "sd_io_wrapper_0/emio_sdio1_dataout"
+        ]
+      },
+      "zynq_ultra_ps_e_0_emio_sdio1_ledcontrol": {
+        "ports": [
+          "zynq_ultra_ps_e_0/emio_sdio1_ledcontrol",
+          "sd_io_wrapper_0/emio_sdio1_ledcontrol"
         ]
       },
       "zynq_ultra_ps_e_0_emio_ttc0_wave_o": {

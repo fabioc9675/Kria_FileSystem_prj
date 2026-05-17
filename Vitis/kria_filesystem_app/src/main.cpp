@@ -9,13 +9,13 @@ void vSDTask(void *pvParameters)
 {
     FIL fil;          // Objeto de archivo
     FRESULT res;      // Resultado de operaciones
-    char buffer[100]; // Buffer para leer
+    char buffer[100] = {0}; // Buffer para leer
     UINT br;          // Bytes leidos
 
     xil_printf("Montando SD..\r\n");
 
     // Montar la unidad 0 (SD1 mapeada en hardware)
-    res = f_mount(&fatfs, "1:/", 1);
+    res = f_mount(&fatfs, "0:/", 1);
     if (res != FR_OK)
     {
         xil_printf("Error montando SD: %d\r\n", res);
