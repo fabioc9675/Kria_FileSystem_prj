@@ -35,6 +35,7 @@ platform active {kria_arch_a_platform}
 domain active {freertos10_xilinx_domain}
 bsp config total_heap_size "131072"
 bsp config tick_rate "1000"
+bsp setlib -name xilffs -ver 4.8  
 bsp write
 bsp reload
 catch {bsp regenerate}

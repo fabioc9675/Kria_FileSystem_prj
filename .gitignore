@@ -34,6 +34,7 @@
 !/vitis/fftw3f_lib/lib/libfftw3f.a
 *.lib
 !/ftdi_test/ftd2xx.lib
+!/Vivado/bd/kria_bd/hdl/kria_bd_wrapper.vhd
 
 # Executables
 *.exe

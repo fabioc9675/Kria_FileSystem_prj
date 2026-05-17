@@ -25,6 +25,7 @@
 
 BD/*
 !bd/*.bd
+!bd/kria_bd/hdl/kria_bd_wrapper.vhd
 
 ## OS
 .DS_Store
