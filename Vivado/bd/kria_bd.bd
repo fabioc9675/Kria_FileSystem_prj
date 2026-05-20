@@ -493,8 +493,20 @@
           "PSU_MIO_44_SLEW": {
             "value": "fast"
           },
+          "PSU_MIO_45_DRIVE_STRENGTH": {
+            "value": "12"
+          },
+          "PSU_MIO_45_POLARITY": {
+            "value": "Default"
+          },
+          "PSU_MIO_45_SLEW": {
+            "value": "fast"
+          },
           "PSU_MIO_46_DRIVE_STRENGTH": {
             "value": "12"
+          },
+          "PSU_MIO_46_POLARITY": {
+            "value": "Default"
           },
           "PSU_MIO_46_SLEW": {
             "value": "fast"
@@ -502,17 +514,26 @@
           "PSU_MIO_47_DRIVE_STRENGTH": {
             "value": "12"
           },
+          "PSU_MIO_47_POLARITY": {
+            "value": "Default"
+          },
           "PSU_MIO_47_SLEW": {
             "value": "fast"
           },
           "PSU_MIO_48_DRIVE_STRENGTH": {
             "value": "12"
           },
+          "PSU_MIO_48_POLARITY": {
+            "value": "Default"
+          },
           "PSU_MIO_48_SLEW": {
             "value": "fast"
           },
           "PSU_MIO_49_DRIVE_STRENGTH": {
             "value": "12"
+          },
+          "PSU_MIO_49_POLARITY": {
+            "value": "Default"
           },
           "PSU_MIO_49_SLEW": {
             "value": "fast"
@@ -532,11 +553,20 @@
           "PSU_MIO_50_INPUT_TYPE": {
             "value": "cmos"
           },
+          "PSU_MIO_50_POLARITY": {
+            "value": "Default"
+          },
           "PSU_MIO_50_SLEW": {
             "value": "slow"
           },
           "PSU_MIO_51_DRIVE_STRENGTH": {
             "value": "4"
+          },
+          "PSU_MIO_51_INPUT_TYPE": {
+            "value": "cmos"
+          },
+          "PSU_MIO_51_POLARITY": {
+            "value": "Default"
           },
           "PSU_MIO_51_SLEW": {
             "value": "slow"
@@ -824,11 +854,11 @@
             "value": [
               "GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0",
               "MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#PMU GPI 5#PMU GPO 0#PMU GPO 1#PMU GPO 2#PMU GPO 3#UART 1#UART 1#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1",
-              "MIO#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#########################USB0 Reset#USB1 Reset"
+              "MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#########################USB0 Reset#USB1 Reset"
             ]
           },
           "PSU_MIO_TREE_SIGNALS": {
-            "value": "gpio0[0]#gpio0[1]#gpio0[2]#gpio0[3]#gpio0[4]#gpio0[5]#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#gpi[0]#gpio1[27]#gpio1[28]#gpio1[29]#gpio1[30]#gpi[5]#gpo[0]#gpo[1]#gpo[2]#gpo[3]#txd#rxd#gpio1[38]#gpio1[39]#gpio1[40]#gpio1[41]#gpio1[42]#gpio1[43]#gpio1[44]#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#########################reset#reset"
+            "value": "gpio0[0]#gpio0[1]#gpio0[2]#gpio0[3]#gpio0[4]#gpio0[5]#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#gpi[0]#gpio1[27]#gpio1[28]#gpio1[29]#gpio1[30]#gpi[5]#gpo[0]#gpo[1]#gpo[2]#gpo[3]#txd#rxd#gpio1[38]#gpio1[39]#gpio1[40]#gpio1[41]#gpio1[42]#gpio1[43]#gpio1[44]#gpio1[45]#gpio1[46]#gpio1[47]#gpio1[48]#gpio1[49]#gpio1[50]#gpio1[51]#########################reset#reset"
           },
           "PSU_SD0_INTERNAL_BUS_WIDTH": {
             "value": "8"
@@ -1014,10 +1044,10 @@
             "value": "124.999992"
           },
           "PSU__CRL_APB__GEM1_REF_CTRL__ACT_FREQMHZ": {
-            "value": "125.000000"
+            "value": "125"
           },
           "PSU__CRL_APB__GEM_TSU_REF_CTRL__ACT_FREQMHZ": {
-            "value": "250.000000"
+            "value": "250"
           },
           "PSU__CRL_APB__GEM_TSU_REF_CTRL__SRCSEL": {
             "value": "IOPLL"
