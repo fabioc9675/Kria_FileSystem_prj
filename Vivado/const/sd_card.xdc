@@ -4,6 +4,10 @@
 set_property PACKAGE_PIN AA11 [get_ports sd_clk_out]
 set_property IOSTANDARD LVCMOS33 [get_ports sd_clk_out]
 
+# Reloj (SD_CLK_FB)
+set_property PACKAGE_PIN E10 [get_ports sd_clk_fb]
+set_property IOSTANDARD LVCMOS33 [get_ports sd_clk_fb]
+
 # Comando (SD_CMD)
 set_property PACKAGE_PIN AE10 [get_ports sd_cmd_io]
 set_property IOSTANDARD LVCMOS33 [get_ports sd_cmd_io]

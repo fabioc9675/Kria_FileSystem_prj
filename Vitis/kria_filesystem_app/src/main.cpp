@@ -1,7 +1,13 @@
 #include "FreeRTOS.h"
 #include "task.h"
-#include "ff.h"
 #include "xil_printf.h"
+#include "xsdps_hw.h" // Cabecera de registros nativos de la SD
+
+
+// Forzamos al compilador de C++ a mantener los nombres limpios de FatFs
+extern "C" {
+    #include "ff.h"
+}
 
 static FATFS fatfs;
 
@@ -11,6 +17,15 @@ void vSDTask(void *pvParameters)
     FRESULT res;      // Resultado de operaciones
     char buffer[100] = {0}; // Buffer para leer
     UINT br;          // Bytes leidos
+
+    // Usa UINTPTR que es el tipo nativo de Xilinx para direcciones de 64/32 bits
+    UINTPTR base_addr = XPAR_PSU_SD_1_BASEADDR;
+
+    // Forzar el encendido del bus: 3.3V (0x0E) + Bus Power On (0x01) = 0x0F
+    XSdPs_WriteReg8(base_addr, XSDPS_POWER_CTRL_OFFSET, 0x0F);
+
+    // Delay corto de FreeRTOS para que el silicio asiente la configuración
+    vTaskDelay(pdMS_TO_TICKS(10));
 
     xil_printf("Montando SD..\r\n");
 

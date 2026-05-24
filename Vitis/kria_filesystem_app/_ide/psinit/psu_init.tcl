@@ -545,19 +545,19 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_SDIO1_REF_CTRL_CLKACT                                               0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_SDIO1_REF_CTRL_DIVISOR1                                             0x1
+		# PSU_CRL_APB_SDIO1_REF_CTRL_DIVISOR1                                             0x3
 
 		# 6 bit divider
-		# PSU_CRL_APB_SDIO1_REF_CTRL_DIVISOR0                                             0x35
+		# PSU_CRL_APB_SDIO1_REF_CTRL_DIVISOR0                                             0x32
 
 		# 000 = IOPLL; 010 = RPLL; 011 = VPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
     #  usually an issue, but designers must be aware.)
-		# PSU_CRL_APB_SDIO1_REF_CTRL_SRCSEL                                               0x2
+		# PSU_CRL_APB_SDIO1_REF_CTRL_SRCSEL                                               0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0070, 0x013F3F07U ,0x01013502U)  */
-    mask_write 0XFF5E0070 0x013F3F07 0x01013502
+		#(OFFSET, MASK, VALUE)      (0XFF5E0070, 0x013F3F07U ,0x01033200U)  */
+    mask_write 0XFF5E0070 0x013F3F07 0x01033200
 		# Register : SDIO_CLK_CTRL @ 0XFF18030C</p>
 
 		# Selection of SD Feedback clock 0: Feedback clock from MIO PAD 1: Feddbac
@@ -13109,15 +13109,15 @@ set psu_peripherals_init_data {
 		# Register : SD_CONFIG_REG1 @ 0XFF18031C</p>
 
 		# Base Clock Frequency for SD Clock. This is the frequency of the xin_clk.
-		# PSU_IOU_SLCR_SD_CONFIG_REG1_SD1_BASECLK                                         0x13
+		# PSU_IOU_SLCR_SD_CONFIG_REG1_SD1_BASECLK                                         0xa
 
 		# Configures the Number of Taps (Phases) of the rxclk_in that is supported
     # .
 		# PSU_IOU_SLCR_SD_CONFIG_REG1_SD1_TUNIGCOUNT                                      0x28
 
 		# SD Config Register 1
-		#(OFFSET, MASK, VALUE)      (0XFF18031C, 0x7FFE0000U ,0x09D00000U)  */
-    mask_write 0XFF18031C 0x7FFE0000 0x09D00000
+		#(OFFSET, MASK, VALUE)      (0XFF18031C, 0x7FFE0000U ,0x05500000U)  */
+    mask_write 0XFF18031C 0x7FFE0000 0x05500000
 		# Register : SD_DLL_CTRL @ 0XFF180358</p>
 
 		# Reserved.

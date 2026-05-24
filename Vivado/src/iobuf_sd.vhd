@@ -19,11 +19,13 @@ entity sd_io_wrapper is
         emio_sdio1_cd_n       : out std_logic;
         
         -- Estos no los usamos pero el Zynq los pide
+        emio_sdio1_wp         : out std_logic;
         emio_sdio1_ledcontrol : in std_logic;
         emio_sdio1_bus_volt   : in std_logic_vector(2 downto 0);
         
         -- Puertos físicos (estos se quedan individuales para el XDC)
         sd_clk_out            : out std_logic;
+        sd_clk_fb             : in  std_logic;
         sd_cmd_io             : inout std_logic;
         sd_data_io            : inout std_logic_vector(3 downto 0)
     );
@@ -41,12 +43,19 @@ begin
         O => sd_clk_out
     );
 
+    ibuf_clk : IBUF
+    port map (
+        I => sd_clk_fb,
+        O => emio_sdio1_fb_clk_in
+    );
+
     -- El Feedback es esencial para que el controlador sincronice la lectura
-    emio_sdio1_fb_clk_in <= not emio_sdio1_clk_out;
+    -- emio_sdio1_fb_clk_in <= not emio_sdio1_clk_out;
 
     -- 2. Constantes de estado (L�gica interna)
     -- Card Detect: '0' indica que la tarjeta est� PRESENTE (l�gica negativa)
     emio_sdio1_cd_n <= '0';
+    emio_sdio1_wp <= '0';
 
     -- 3. Buffer bidireccional para el Comando (CMD)
     -- Invertimos 'ena' porque T=0 es salida y T=1 es entrada (Hi-Z)

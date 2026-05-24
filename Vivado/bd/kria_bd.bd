@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6BE4370B50C981FF",
+      "boundary_crc": "0xB13F610EA0D4A441",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "kria_bd",
       "name": "kria_bd",
@@ -113,6 +113,9 @@
         "direction": "IO",
         "left": "3",
         "right": "0"
+      },
+      "sd_clk_fb": {
+        "direction": "I"
       }
     },
     "components": {
@@ -1122,13 +1125,13 @@
             "value": "199.999985"
           },
           "PSU__CRL_APB__SDIO1_REF_CTRL__ACT_FREQMHZ": {
-            "value": "19.811321"
+            "value": "10.000000"
           },
           "PSU__CRL_APB__SDIO1_REF_CTRL__FREQMHZ": {
-            "value": "20"
+            "value": "10"
           },
           "PSU__CRL_APB__SDIO1_REF_CTRL__SRCSEL": {
-            "value": "RPLL"
+            "value": "IOPLL"
           },
           "PSU__CRL_APB__SPI1_REF_CTRL__ACT_FREQMHZ": {
             "value": "187.500000"
@@ -1515,7 +1518,10 @@
             "value": "0"
           },
           "PSU__SD1__GRP_WP__ENABLE": {
-            "value": "0"
+            "value": "1"
+          },
+          "PSU__SD1__GRP_WP__IO": {
+            "value": "EMIO"
           },
           "PSU__SD1__PERIPHERAL__ENABLE": {
             "value": "1"
@@ -3398,6 +3404,9 @@
           "emio_sdio1_cd_n": {
             "direction": "O"
           },
+          "emio_sdio1_wp": {
+            "direction": "O"
+          },
           "emio_sdio1_ledcontrol": {
             "direction": "I"
           },
@@ -3408,6 +3417,9 @@
           },
           "sd_clk_out": {
             "direction": "O"
+          },
+          "sd_clk_fb": {
+            "direction": "I"
           },
           "sd_cmd_io": {
             "direction": "IO"
@@ -3659,6 +3671,18 @@
             "value": "true"
           }
         }
+      },
+      "sd_clk_fb_0_1": {
+        "ports": [
+          "sd_clk_fb",
+          "sd_io_wrapper_0/sd_clk_fb"
+        ]
+      },
+      "sd_io_wrapper_0_emio_sdio1_wp": {
+        "ports": [
+          "sd_io_wrapper_0/emio_sdio1_wp",
+          "zynq_ultra_ps_e_0/emio_sdio1_wp"
+        ]
       },
       "sd_io_wrapper_0_emio_sdio_1_cd_i": {
         "ports": [
