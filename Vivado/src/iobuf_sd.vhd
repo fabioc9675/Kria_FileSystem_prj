@@ -36,7 +36,7 @@ architecture Behavioral of sd_io_wrapper is
 begin
 
     -- 1. Manejo del Reloj y Feedback
-    -- El OBUF asegura que la se�al salga con fuerza al PMOD
+    -- El OBUF asegura que la senal salga con fuerza al PMOD
     obuf_clk : OBUF
     port map (
         I => emio_sdio1_clk_out,
@@ -50,10 +50,10 @@ begin
     );
 
     -- El Feedback es esencial para que el controlador sincronice la lectura
-    -- emio_sdio1_fb_clk_in <= not emio_sdio1_clk_out;
+    -- emio_sdio1_fb_clk_in <= emio_sdio1_clk_out;
 
-    -- 2. Constantes de estado (L�gica interna)
-    -- Card Detect: '0' indica que la tarjeta est� PRESENTE (l�gica negativa)
+    -- 2. Constantes de estado (Logica interna)
+    -- Card Detect: '0' indica que la tarjeta esta PRESENTE (logica negativa)
     emio_sdio1_cd_n <= '0';
     emio_sdio1_wp <= '0';
 

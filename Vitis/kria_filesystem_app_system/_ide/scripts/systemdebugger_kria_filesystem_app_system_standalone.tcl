@@ -31,5 +31,4 @@ targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/GitHub/Kria_FileSystem_prj/Vitis/kria_filesystem_app/Debug/kria_filesystem_app.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A53*#0"}
-con
+bpadd -addr &main
